@@ -23,16 +23,14 @@ def get_intent(command):
     elif "notepad" in command:
         return "notepad"
 
-    elif "battery" in command or "charge" in command:
-      return "battery"
+    elif "volume up" in command or "increase volume" in command:
+     return "volume_up"
 
-    elif "time" in command:
-        return "time"
+    elif "volume down" in command or "decrease volume" in command:
+     return "volume_down"
 
-    elif "screenshot" in command or "take screenshot" in command:
-     return "screenshot"
+    elif "unmute" in command:
+     return "unmute"
 
-    elif "exit" in command:
-        return "exit"
-
-    return "unknown"
+    elif "mute" in command and "unmute" not in command:
+     return "mute"
