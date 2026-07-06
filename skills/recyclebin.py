@@ -1,11 +1,20 @@
-import winshell
-
+import subprocess
 from voice.speak import speak
 
 
 def empty_recycle_bin():
     try:
-        winshell.recycle_bin().empty(confirm=False, show_progress=False, sound=True)
+        subprocess.run(
+            [
+                "powershell",
+                "-Command",
+                "Clear-RecycleBin -Force"
+            ],
+            check=True,
+        )
+
         speak("Recycle Bin has been emptied.")
-    except Exception:
+
+    except Exception as e:
+        print(e)
         speak("Sorry Boss, I couldn't empty the Recycle Bin.")

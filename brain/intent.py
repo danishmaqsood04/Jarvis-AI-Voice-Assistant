@@ -54,6 +54,9 @@ def get_intent(command):
 
     elif "open desktop" in command or "desktop" in command:
      return "open_desktop"
+    
+    elif "recycle bin" in command:
+     return "empty_recycle_bin"
 
     elif "battery" in command or "charge" in command:
      return "battery"

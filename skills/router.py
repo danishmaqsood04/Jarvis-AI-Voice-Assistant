@@ -9,7 +9,7 @@ from skills.battery import battery_status
 from skills.apps import open_app
 from skills.screenshot import take_screenshot
 from skills.brightness import brightness_up, brightness_down
-
+from skills.recyclebin import empty_recycle_bin
 from skills.folders import (
     open_downloads,
     open_documents,
@@ -39,6 +39,8 @@ def run_command(intent):
         "open_downloads": open_downloads,
         "open_documents": open_documents,
         "open_desktop": open_desktop,
+
+        "empty_recycle_bin": empty_recycle_bin,
     }
 
     if intent in commands:

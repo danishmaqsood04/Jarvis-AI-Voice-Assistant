@@ -1,3 +1,11 @@
 SpeechRecognition
 PyAudio
 pyttsx3
+requests
+pywhatkit
+psutil
+screen-brightness-control
+pycaw==20230407
+comtypes
+mss
+winshell

@@ -49,3 +49,6 @@ def execute(command):
 
     else:
         speak("Sorry Boss, I don't know that command.")
+
+        intent = get_intent(command)
+    print("Intent:", intent)
