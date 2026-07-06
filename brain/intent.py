@@ -34,3 +34,9 @@ def get_intent(command):
 
     elif "mute" in command and "unmute" not in command:
      return "mute"
+    
+    elif "increase brightness" in command or "brightness up" in command:
+     return "brightness_up"
+
+    elif "decrease brightness" in command or "brightness down" in command:
+        return "brightness_down"
