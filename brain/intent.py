@@ -23,6 +23,9 @@ def get_intent(command):
     elif "notepad" in command:
         return "notepad"
 
+    elif "battery" in command or "charge" in command:
+      return "battery"
+
     elif "time" in command:
         return "time"
 
