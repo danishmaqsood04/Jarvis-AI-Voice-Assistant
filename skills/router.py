@@ -4,10 +4,18 @@ from skills.volume import (
     mute_volume,
     unmute_volume,
 )
+
 from skills.battery import battery_status
 from skills.apps import open_app
 from skills.screenshot import take_screenshot
 from skills.brightness import brightness_up, brightness_down
+
+from skills.folders import (
+    open_downloads,
+    open_documents,
+    open_desktop,
+)
+
 
 def run_command(intent):
 
@@ -19,17 +27,18 @@ def run_command(intent):
 
         "screenshot": take_screenshot,
         "battery": battery_status,
-        "volume_up": lambda: volume_up(),
-        "volume_down": lambda: volume_down(),
-        "brightness_up": brightness_up,
-        "brightness_down": brightness_down,
-        
-        "mute": lambda: mute_volume(),
-        "unmute": lambda: unmute_volume(),
+
         "volume_up": volume_up,
         "volume_down": volume_down,
         "mute": mute_volume,
         "unmute": unmute_volume,
+
+        "brightness_up": brightness_up,
+        "brightness_down": brightness_down,
+
+        "open_downloads": open_downloads,
+        "open_documents": open_documents,
+        "open_desktop": open_desktop,
     }
 
     if intent in commands:

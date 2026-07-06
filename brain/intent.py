@@ -40,3 +40,23 @@ def get_intent(command):
 
     elif "decrease brightness" in command or "brightness down" in command:
         return "brightness_down"
+    
+    elif "open downloads" in command or "downloads" in command:
+     return "open_downloads"
+
+    elif (
+    "open document" in command
+    or "open documents" in command
+    or "document" in command
+    or "documents" in command
+):
+     return "open_documents"
+
+    elif "open desktop" in command or "desktop" in command:
+     return "open_desktop"
+
+    elif "battery" in command or "charge" in command:
+     return "battery"
+
+    elif "time" in command:
+     return "time"
