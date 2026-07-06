@@ -58,6 +58,9 @@ def get_intent(command):
     elif "recycle bin" in command:
      return "empty_recycle_bin"
 
+    elif "weather" in command:
+     return "weather"
+
     elif "battery" in command or "charge" in command:
      return "battery"
 
