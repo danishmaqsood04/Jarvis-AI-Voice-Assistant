@@ -26,6 +26,9 @@ def get_intent(command):
     elif "time" in command:
         return "time"
 
+    elif "screenshot" in command or "take screenshot" in command:
+     return "screenshot"
+
     elif "exit" in command:
         return "exit"
 
