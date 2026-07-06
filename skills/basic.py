@@ -6,6 +6,7 @@ from voice.speak import speak
 from skills.screenshot import take_screenshot
 from skills.google_search import google_search
 from skills.apps import open_app
+from skills.router import run_command
 from brain.intent import get_intent
 
 
@@ -15,6 +16,9 @@ def execute(command):
 
     if intent == "google_search":
         google_search(command)
+
+    if run_command(intent):
+     return
 
     elif intent == "youtube":
         youtube_search(command)
