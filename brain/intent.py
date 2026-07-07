@@ -66,3 +66,6 @@ def get_intent(command):
 
     elif "time" in command:
      return "time"
+    
+    elif "news" in command or "headlines" in command:
+     return "news"

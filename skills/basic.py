@@ -9,7 +9,7 @@ from skills.apps import open_app
 from skills.router import run_command
 from skills.weather import weather
 from brain.intent import get_intent
-
+from skills.news import news
 
 def execute(command):
 
@@ -61,5 +61,10 @@ def execute(command):
     elif intent == "notepad":
         open_app("notepad")
 
+     
+    elif intent == "news":
+     news()
+
     else:
         speak("Sorry Boss, I don't know that command.")
+
