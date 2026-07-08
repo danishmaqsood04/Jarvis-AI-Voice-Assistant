@@ -61,6 +61,9 @@ def get_intent(command):
     elif "weather" in command:
      return "weather"
 
+    elif "open camera" in command or command == "camera":
+     return "camera"
+
     elif "battery" in command or "charge" in command:
      return "battery"
 
