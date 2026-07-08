@@ -4,7 +4,8 @@ from skills.volume import (
     mute_volume,
     unmute_volume,
 )
-
+from skills.recyclebin import empty_recycle_bin
+from skills.camera import open_camera, take_photo
 from skills.battery import battery_status
 from skills.apps import open_app
 from skills.screenshot import take_screenshot
@@ -14,9 +15,6 @@ from skills.folders import (
     open_documents,
     open_desktop,
 )
-from skills.recyclebin import empty_recycle_bin
-from skills.camera import open_camera
-
 
 def run_command(intent):
 
@@ -44,6 +42,7 @@ def run_command(intent):
         "empty_recycle_bin": empty_recycle_bin,
 
         "camera": open_camera,
+        "take_photo": take_photo,
     }
 
     if intent in commands:

@@ -11,7 +11,7 @@ def main():
         if not command:
             continue
 
-        if "exit" in command or "goodbye" in command or "stop" in command:
+        if "exit " in command or "goodbye" in command or "stop" in command:
             speak("Goodbye Boss. Have a nice day.")
             break
 

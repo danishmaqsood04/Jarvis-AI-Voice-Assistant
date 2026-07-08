@@ -3,6 +3,9 @@ from voice.speak import speak
 
 
 def battery_status():
+
+    speak("Checking battery status.")
+
     battery = psutil.sensors_battery()
 
     if battery is None:
@@ -12,6 +15,6 @@ def battery_status():
     percent = battery.percent
 
     if battery.power_plugged:
-        speak(f"Your battery is {percent} percent and charging.")
+        speak(f"Your battery is {percent} percent and it is charging.")
     else:
         speak(f"Your battery is {percent} percent.")

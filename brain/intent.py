@@ -64,6 +64,25 @@ def get_intent(command):
     elif "open camera" in command or command == "camera":
      return "camera"
 
+    elif (
+    "take photo" in command
+    or "take a photo" in command
+    or "click photo" in command
+    or "click image" in command
+    or "capture image" in command
+    or "take picture" in command
+):
+     return "take_photo"
+
+
+    elif (
+    "take screenshot" in command
+    or "take a screenshot" in command
+    or "screenshot" in command
+    or "capture screen" in command
+):
+     return "screenshot"
+
     elif "battery" in command or "charge" in command:
      return "battery"
 

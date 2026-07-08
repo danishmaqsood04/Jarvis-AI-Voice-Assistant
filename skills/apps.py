@@ -1,8 +1,9 @@
 import subprocess
-import os
 from voice.speak import speak
 
+
 def open_app(app_name):
+    print("open_app() function called")
 
     if app_name == "notepad":
         speak("Opening Notepad")
@@ -28,5 +29,3 @@ def open_app(app_name):
 
     else:
         speak("Application not found.")
-        
-        print("apps.py loaded successfully")

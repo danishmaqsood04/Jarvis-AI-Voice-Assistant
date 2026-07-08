@@ -7,6 +7,8 @@ from voice.speak import speak
 
 def take_screenshot():
 
+    speak("Taking screenshot.")
+
     folder = "screenshots"
 
     if not os.path.exists(folder):
