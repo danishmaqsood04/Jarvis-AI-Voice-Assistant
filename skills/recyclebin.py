@@ -4,6 +4,8 @@ from voice.speak import speak
 
 def empty_recycle_bin():
     try:
+        speak("Emptying the Recycle Bin.")
+
         subprocess.run(
             [
                 "powershell",
@@ -13,7 +15,7 @@ def empty_recycle_bin():
             check=True,
         )
 
-        speak("Recycle Bin has been emptied.")
+        speak("Recycle Bin has been emptied successfully.")
 
     except Exception as e:
         print(e)
